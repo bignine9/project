@@ -5,11 +5,17 @@ function searchbutton(){
 
 //아티클 하이퍼링크
 function thishyper(){
-    alert("아직 페이지가 구현되지 않았습니다.");
-    //location.href = "/index.html"; 추후 페이지 작성 후 변경 요망
+    location.href = "./plan.html#plan";
 }
 
 function content(){
-    alert("아직 구현되지 않았습니다.");
-    //location.href = "/index.html"; 추후 페이지 작성 후 변경 요망
+    location.href = "./community.html#notice";
+}
+
+function content2(){
+    location.href = "./about.html#notice";
+}
+
+function content3(){
+    location.href = "./plan.html#plan";
 }

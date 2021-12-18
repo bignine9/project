@@ -22,6 +22,32 @@
     <title>0UO│당신을 위한 공유오피스</title>
 </head>
 <body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0; height: 100%; width: fit-content;z-index:4" id="rightMenu">
+        <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>      
+            <table border="0">
+                <tr>
+                <td>이름</td>
+                </tr>
+                <tr>
+                <td>
+                    <input type="text" name="name" maxlength="45" size="30" />
+                </td>
+            </tr>
+            <tr>
+            <td>전화번호</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="phone" maxlength="50" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Add Data" />
+                </td>
+                </tr>
+            </table>
+    </div>
      <!----><!----><!--네비--><!----><!---->
   <nav class="navbar" style="width: 100%;">
     <!--네비 로고그림-->
@@ -32,18 +58,18 @@
     </div>
     <!--네비 메뉴-->
         <p class="navbar_menu">
-            <span><a href="./main.html" style="color: black; font-weight:bold">오피스 소개</a></span>
+            <span><a href="./office_int.html" style="color: black; font-weight:bold">오피스 소개</a></span>
             <span><a href="./plan.html" style="color: black; font-weight:bold">플랜&가격</a></span>
-            <span><a href="" style="color: black; font-weight:bold">커뮤니티</a></span>
+            <span><a href="./community.html" style="color: black; font-weight:bold">커뮤니티</a></span>
             <span><a href="./about.html" style="color: black; font-weight:bold">ABOUT</a></span>
-            <button class = "navbar_but"type = "button" onclick = "">연락 및 문의</button>
+            <button class = "navbar_but" type = "button" onclick = "openRightMenu()">연락 및 문의</button>
         </p>
     </nav>
 
     <br>
     
    <section>
-        <img src="./img/img1.png" alt="img" style="width: 100%; height: 700px;">
+        <img src="./img/img1.jpg" alt="img" style="width: 100%; height: 700px; filter: brightness(50%);">
         <p class="search_word1" style="font-weight:bold">제로유만의 특별한 멤버쉽</p>
         <p class="search_word2">
             원하는 멤버쉽을 선택해보세요! 제로유는 유연한 작업 환경을 제공합니다.<br>
@@ -457,7 +483,7 @@
     </div>
     </footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js'></script>
-    <script src="myjs.js"></script>
+    <script src="myjs2.js"></script>
     <script>
         function showDivs(n, cls) {
     var i;
@@ -490,6 +516,16 @@ showDivs(slideIndex, "mySlides3");
 function plusDivs(n, cls) {
   showDivs(slideIndex += n, cls);
 }
+
+    
+        function openRightMenu() {
+            document.getElementById("rightMenu").style.display = "block";
+        }
+
+        function closeRightMenu() {
+            document.getElementById("rightMenu").style.display = "none";
+        }
+
 
     </script>
 </body>

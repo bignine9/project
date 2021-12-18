@@ -18,6 +18,32 @@
     <title>0UO│당신을 위한 공유오피스</title>
 </head>
 <body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0; height: 100%; width: fit-content;z-index:4" id="rightMenu">
+        <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>      
+            <table border="0">
+                <tr>
+                <td>이름</td>
+                </tr>
+                <tr>
+                <td>
+                    <input type="text" name="name" maxlength="45" size="30" />
+                </td>
+            </tr>
+            <tr>
+            <td>전화번호</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="phone" maxlength="50" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Add Data" />
+                </td>
+                </tr>
+            </table>
+    </div>
      <!----><!----><!--네비--><!----><!---->
   <nav class="navbar">
     <!--네비 로고그림-->
@@ -28,13 +54,14 @@
     </div>
     <!--네비 메뉴-->
         <p class="navbar_menu">
-            <span><a href="./main.html" style="color: black; font-weight:bold">오피스 소개</a></span>
+            <span><a href="./office_int.html" style="color: black; font-weight:bold">오피스 소개</a></span>
             <span><a href="./plan.html" style="color: black; font-weight:bold">플랜&가격</a></span>
-            <span><a href="" style="color: black; font-weight:bold">커뮤니티</a></span>
+            <span><a href="./community.html" style="color: black; font-weight:bold">커뮤니티</a></span>
             <span><a href="./about.html" style="color: black; font-weight:bold">ABOUT</a></span>
-            <button class = "navbar_but"type = "button" onclick = "">연락 및 문의</button>
+            <button class = "navbar_but" type = "button" onclick = "openRightMenu()">연락 및 문의</button>
         </p>
     </nav>
+    
     <!--섹션 이미지와 글-->
     <section class = "search">
         <img src="./img/office.jpg" class = "search_img" alt="search" width="100%" height="700px" >
@@ -116,14 +143,14 @@
                         <div class = "artcontent_imgtext2">
                             <h3>미팅룸</h3>
                             <p>미팅룸 예약</p>
-                            <button type="button" onclick="content()">자세히 보기</button>
+                            <button type="button" onclick="content3()">자세히 보기</button>
                         </div>
                     </td>
                     <td><img src="./img/enter.jpg" alt="enter" class = "artcontent_enter">
                         <div class = "artcontent_imgtext3">
                             <h3>엔터프라이즈365</h3>
                             <p>상담 문의</p>
-                            <button type="button" onclick="content()">자세히 보기</button>
+                            <button type="button" onclick="content2()">자세히 보기</button>
                         </div>
                     </td>
                     <td><img src="./img/event.JPG" alt="event" class = "artcontent_event">
@@ -170,5 +197,17 @@
         </div>
     </div>
     </footer>
+
+    <script>
+        function openRightMenu() {
+            document.getElementById("rightMenu").style.display = "block";
+        }
+
+        function closeRightMenu() {
+            document.getElementById("rightMenu").style.display = "none";
+        }
+
+    </script>
+
 </body>
 </html>
